@@ -13,5 +13,5 @@ while num != secret:
     if num != secret:
         print("Intenta de nuevo")
 
-print("Felicidades, le atinate")
+print("Felicidades, le atinaste")
 print(f"El número era {secret}")
