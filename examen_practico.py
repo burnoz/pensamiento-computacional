@@ -15,29 +15,26 @@ while True:
     else:
         print("\nError, ingrese valores válidos")
 
-while horas >= 0:
-    while minutos >= 0:
-        while segundos >= 0:
-            if len(str(horas)) == 1:
-                horas = "0" + str(horas)
 
-            if len(str(minutos)) == 1:
-                minutos = "0" + str(minutos)
+for hora in range(horas, -1, -1):
+    for minuto in range(minutos, -1, -1):
+        for segundo in range(segundos, -1, -1):
+            if len(str(hora)) == 1:
+                hora = "0" + str(hora)
+
+            if len(str(minuto)) == 1:
+                minuto = "0" + str(minuto)
                 
-            if len(str(segundos)) == 1:
-                segundos = "0" + str(segundos)
+            if len(str(segundo)) == 1:
+                segundo = "0" + str(segundo)
 
-            print(horas, minutos, segundos, sep=":")
+            print(hora, minuto, segundo, sep=":")
 
-            horas = int(horas)
-            minutos = int(minutos)
-            segundos = int(segundos)
-
-            segundos -= 1
+            segundo = int(segundo)
             sleep(1)
         segundos = 59
-        minutos -= 1
+        minuto = int(minuto)
     minutos = 59
-    horas -= 1
+    hora = int(hora)
 
 print("\nFin de la cuenta regresiva")
