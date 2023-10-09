@@ -1,3 +1,5 @@
+# Versión de Fabián
+
 import random
 def destapar_valor(ren_uno,col_uno,ren_dos,col_dos,valor_matriz):
     matriz=tablero_tapado()
