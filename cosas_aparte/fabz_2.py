@@ -53,10 +53,20 @@ def main():
             r1 = int(input("Renglon carta 1: "))
             c1 = int(input("Columna carta 1: "))
 
+            while matriz[r1][c1] != "-":
+                print("Carta no disponible")
+                r1 = int(input("Renglon carta 1: "))
+                c1 = int(input("Columna carta 1: "))
+
             print("Carta 1: ", matriz_nums[r1][c1])
 
             r2 = int(input("Renglon carta 2: "))
             c2 = int(input("Columna carta 2: "))
+
+            while matriz[r2][c2] != "-":
+                print("Carta no disponible")
+                r2 = int(input("Renglon carta 2: "))
+                c2 = int(input("Columna carta 2: "))
 
             print("Carta 2: ", matriz_nums[r2][c2])
 
@@ -82,10 +92,20 @@ def main():
             r1 = int(input("Renglon carta 1: "))
             c1 = int(input("Columna carta 1: "))
 
+            while matriz[r1][c1] != "-":
+                print("Carta no disponible")
+                r1 = int(input("Renglon carta 1: "))
+                c1 = int(input("Columna carta 1: "))
+
             print("Carta 1: ", matriz_nums[r1][c1])
 
             r2 = int(input("Renglon carta 2: "))
             c2 = int(input("Columna carta 2: "))
+
+            while matriz[r2][c2] != "-":
+                print("Carta no disponible")
+                r2 = int(input("Renglon carta 2: "))
+                c2 = int(input("Columna carta 2: "))
 
             print("Carta 2: ", matriz_nums[r2][c2])
 
