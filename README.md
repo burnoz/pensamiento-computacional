@@ -1,2 +1,2 @@
-# Pensamiento computacional para ingeniería
+# Pensamiento computacional
 wuuu
