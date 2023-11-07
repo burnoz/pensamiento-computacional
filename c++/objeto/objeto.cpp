@@ -14,13 +14,13 @@ public:
 
     int receive_dmg(){
         hp = hp - 1;
-        cout << name << " ha perdido un punto de vida" << std::endl;
+        cout << name << " ha perdido un punto de vida" << endl;
         return hp;
     }
 
     int heal(){
         hp = hp + 1;
-        cout << name << " ha recuperado un punto de vida" << std::endl;
+        cout << name << " ha recuperado un punto de vida" << endl;
         return hp;
     }
 };

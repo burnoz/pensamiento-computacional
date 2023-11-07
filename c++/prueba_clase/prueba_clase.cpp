@@ -1,4 +1,4 @@
-// Incluir librería
+// Incluir librerías
 
 #include <iostream>
 using namespace std;
@@ -17,9 +17,20 @@ public:
     Persona();
     Persona(string, int, double, double);
 
+    // Declarar métodos de acceso
+    // Método de asignación o modificación de atributos
+    void set_nombre(string);
+    void set_edad(int);
+
+    string get_nombre();
+    int get_edad();
+
     // Mostrar los datos
     void muestra_datos();
     void cantar();
+    float calcular_imc();
+    void calcula_agua();
+    void carne_asada();
 };
 
 // Definir los métodos
@@ -51,6 +62,40 @@ void Persona::cantar(){
     cout << "Calma en mi para poder ver" << endl;
 }
 
+float Persona::calcular_imc(){
+    return peso / (estatura * estatura);
+}
+
+void Persona::calcula_agua(){
+    cout << nombre << " necesita " << 0.03 * peso << " litros de agua al dia" << endl;
+}
+
+void Persona::carne_asada() {
+    cout << "Encender el carbon" << endl;
+    cout << "Bajar la parrilla y limpiarla" << endl;
+    cout << "Poner la carne" << endl;
+    cout << "Darle la vuelta" << endl;
+    cout << "Servir" << endl;
+}
+
+// Setters
+void Persona::set_nombre(string _nombre){
+    nombre = _nombre;
+}
+
+void Persona::set_edad(int _edad){
+    edad = _edad;
+}
+
+// Getters
+string Persona::get_nombre(){
+    return nombre;
+}
+
+int Persona::get_edad(){
+    return edad;
+}
+
 // Crear objetos y manupularlos en el main
 int main(){
     // Crear, construir o instanciar objetos de la clase Persona
@@ -61,7 +106,14 @@ int main(){
     per_2.muestra_datos();
     per_3.muestra_datos();
 
-    per_1.cantar();
+    float imc = per_3.calcular_imc();
+    cout << "IMC: " << imc << endl;
 
+    per_2.set_nombre("Luis");
+    per_2.set_edad(20);
+
+    per_2.muestra_datos();
+    per_2.calcula_agua();
+    per_2.carne_asada();
     return 0;
 }
