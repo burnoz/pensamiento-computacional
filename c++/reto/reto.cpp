@@ -227,7 +227,7 @@ int main(){
                     int id = rand() % 1000;
 
                     // Crea un objeto de la clase Cliente a partir de los datos ingresados
-                    Cliente cliente(nombre, id, Dinero("MXN", 1000));
+                    Cliente cliente(nombre, id, dinero_cliente);
 
                     // Agrega el cliente al vector de clientes de la tienda
                     tienda1.agregar_cliente(cliente);
